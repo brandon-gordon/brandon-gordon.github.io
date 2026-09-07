@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0f3b34" />
+  <title>Mahj Society — Premium American Mahjong</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand" id="brandHome" role="button" tabindex="0" aria-label="Return to lobby">
+        <div class="brand-mark">M</div>
+        <div>
+          <div class="brand-name">Mahj Society</div>
+          <div class="brand-tag">American Mahjong, elevated.</div>
+        </div>
+      </div>
+      <div class="top-actions">
+        <button class="icon-button" id="soundToggle" aria-label="Toggle sound">♪</button>
+        <div class="profile-chip">
+          <div class="avatar">BG</div>
+          <div>
+            <strong>Brandon</strong>
+            <span>1,487 · Gold II</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="lobbyView" class="view active">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <div class="eyebrow">SEASON 01 · PALM COURT</div>
+            <h1>Your table is waiting.</h1>
+            <p>Beautiful American Mahjong with instant matchmaking, private tables, polished gameplay, and a competitive layer designed for serious players.</p>
+            <div class="hero-actions">
+              <button class="primary large" id="quickMatchBtn">Quick Match</button>
+              <button class="secondary large" id="practiceBtn">Practice vs Bots</button>
+            </div>
+            <div class="online-row">
+              <span class="online-dot"></span>
+              <strong>1,284 players online</strong>
+              <span>·</span>
+              <span>Average wait 6 sec</span>
+            </div>
+          </div>
+
+          <div class="hero-card">
+            <div class="hero-card-top">
+              <div>
+                <span class="mini-label">YOUR RANK</span>
+                <h2>Gold II</h2>
+              </div>
+              <div class="rank-medallion">II</div>
+            </div>
+            <div class="rating-line">
+              <span>1,487</span>
+              <div class="progress"><i style="width:66%"></i></div>
+              <span>1,550</span>
+            </div>
+            <div class="stat-grid">
+              <div><strong>68%</strong><span>Win rate</span></div>
+              <div><strong>42</strong><span>Games</span></div>
+              <div><strong>7</strong><span>Best streak</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lobby-grid">
+          <article class="mode-card featured" id="quickModeCard">
+            <div class="mode-icon">⚡</div>
+            <div>
+              <span class="mini-label">PLAY NOW</span>
+              <h3>Quick Match</h3>
+              <p>Find three players close to your skill rating.</p>
+            </div>
+            <span class="mode-arrow">→</span>
+          </article>
+          <article class="mode-card" id="friendModeCard">
+            <div class="mode-icon">♟</div>
+            <div>
+              <span class="mini-label">PRIVATE</span>
+              <h3>Play Friends</h3>
+              <p>Create a private table with an invite code.</p>
+            </div>
+            <span class="mode-arrow">→</span>
+          </article>
+          <article class="mode-card locked">
+            <div class="mode-icon">♛</div>
+            <div>
+              <span class="mini-label">COMING SOON</span>
+              <h3>Ranked Seasons</h3>
+              <p>Climb from Bronze to Master in seasonal competition.</p>
+            </div>
+          </article>
+          <article class="mode-card locked">
+            <div class="mode-icon">🏆</div>
+            <div>
+              <span class="mini-label">COMING SOON</span>
+              <h3>Tournaments</h3>
+              <p>Scheduled events, club championships, and finals.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="gameView" class="view game-view">
+        <div class="game-hud">
+          <div class="round-info">
+            <span class="mini-label">PALM COURT · MATCH 00482</span>
+            <strong id="phaseLabel">First Charleston · Pass Right</strong>
+          </div>
+          <div class="round-actions">
+            <span class="rules-badge">American Set · Prototype Rules</span>
+            <button class="secondary small" id="leaveGameBtn">Leave Table</button>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <div class="table-glow"></div>
+          <div class="mahjong-table">
+            <div class="table-logo">MAHJ<br><span>SOCIETY</span></div>
+
+            <div class="seat seat-top" id="seat2">
+              <div class="seat-card">
+                <div class="avatar alt3">QT</div>
+                <div><strong>QueenTile</strong><span>1,503</span></div>
+              </div>
+              <div class="rack concealed" id="rack2"></div>
+            </div>
+
+            <div class="seat seat-left" id="seat3">
+              <div class="seat-card vertical-card">
+                <div class="avatar alt4">MM</div>
+                <div><strong>MahjMama</strong><span>1,521</span></div>
+              </div>
+              <div class="rack rack-vertical concealed" id="rack3"></div>
+            </div>
+
+            <div class="seat seat-right" id="seat1">
+              <div class="seat-card vertical-card">
+                <div class="avatar alt2">BB</div>
+                <div><strong>BamBam22</strong><span>1,449</span></div>
+              </div>
+              <div class="rack rack-vertical concealed" id="rack1"></div>
+            </div>
+
+            <div class="discard-field" id="discardField"></div>
+            <div class="turn-orb" id="turnOrb">C</div>
+
+            <div class="seat seat-bottom" id="seat0">
+              <div class="rack player-rack" id="playerRack"></div>
+              <div class="seat-bottom-bar">
+                <div class="seat-card player-card">
+                  <div class="avatar">BG</div>
+                  <div><strong>Brandon</strong><span>1,487 · You</span></div>
+                </div>
+                <div class="player-actions">
+                  <button class="secondary small" id="sortBtn">Sort</button>
+                  <button class="secondary small" id="suggestBtn">Suggestion</button>
+                  <button class="primary small" id="primaryActionBtn">Pass 3 Tiles</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="game-sidebar">
+            <section class="sidebar-card">
+              <div class="sidebar-heading">
+                <div>
+                  <span class="mini-label">LIVE COACH</span>
+                  <h3>Smart Suggestions</h3>
+                </div>
+                <span class="beta-pill">BETA</span>
+              </div>
+              <p id="coachText">Select three tiles to pass. Avoid passing Jokers and try to preserve pairs.</p>
+              <div class="coach-metrics">
+                <div><span>Pairs</span><strong id="pairCount">0</strong></div>
+                <div><span>Best suit</span><strong id="bestSuit">—</strong></div>
+                <div><span>Flexibility</span><strong id="flexScore">—</strong></div>
+              </div>
+            </section>
+
+            <section class="sidebar-card">
+              <div class="sidebar-heading"><h3>Table Feed</h3></div>
+              <div class="feed" id="tableFeed"></div>
+            </section>
+
+            <section class="sidebar-card compact-card">
+              <div class="wall-row"><span>Tiles remaining</span><strong id="wallCount">100</strong></div>
+              <div class="wall-meter"><i id="wallMeter" style="width:100%"></i></div>
+            </section>
+          </aside>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="matchModal" aria-hidden="true">
+    <div class="match-modal">
+      <div class="spinner-wrap"><div class="spinner"></div><div class="spinner-core">M</div></div>
+      <span class="mini-label">QUICK MATCH</span>
+      <h2 id="matchTitle">Finding your table…</h2>
+      <p id="matchSubtitle">Searching for players within ±100 rating.</p>
+      <div class="match-list" id="matchList"></div>
+      <button class="secondary" id="cancelMatchBtn">Cancel</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="game.js"></script>
+</body>
+</html>
